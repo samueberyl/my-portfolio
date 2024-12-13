@@ -27,6 +27,30 @@ section{
     padding: 10px;
     max-width: 800px;
 }
+#project,#about,#contact{
+    max-with:800px
+    margin:20px;
+}
+.project{
+    background-color:indigo;
+    margin:20px auto;
+    padding:20px;
+    boader-radius:10px;
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    transition:transform0.3s ease-in-out;
+    display:flex;
+    text-direction:column;
+    align-items:center;
+}
+.project:hover{
+    transform:translate(-5px)
+}
+form{
+dispalay:flex;
+    flex-direction:column;
+    gap:15px;
+    margin:0 auto;
+}
 section h2{
     color: #333;
     margin-bottom: 10px;
