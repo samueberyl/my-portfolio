@@ -1,116 +1,169 @@
-body{
-    font-family:Roboto,sans-serif;
-    margin: 0px;
-    padding: 0px;
-    line-height: 1.6px;
-    box-sizing:boader-box;
-    background-color:#282c34;
-    font-size:18px;
-    color:rgb(29,27,27,);
+/* General Styles */
+
+header {
+  background-color: #333;
+  padding: 20px 0; /* Increase top and bottom padding */
 }
-header{
-    background-color:red;
-    color: #fff;
-    padding:20px ;
-    text-align: center;
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
-nav ul{
-    list-style: none;
-    padding: 0;
-    display:flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
+
+nav ul li {
+  margin: 0 25px; /* Increase margin between items */
 }
-nav ul li{
-margin: 0 25px;
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-size: 1.5rem; /* Increase font size for navigation links */
+  padding: 10px 15px; /* Add padding to links for better click area */
 }
-nav ul li a{
-    color: indigo;
-    text-decoration:none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    font-size:1.5 rem;
-    padding:10px 15px;
+
+nav ul li a:hover {
+  color: #ff9800;
 }
-nav ul li a:hover{
-    color: blue; 
-}
-section{
+
+/* Section Styles */
+section {
   padding: 50px 20px;
-    text-align:center;
+  text-align: center;
 }
-#project,#about,#contact-me{
-   max-width: 800px;
-   margin: 20px auto; 
+
+#about,
+#projects,
+#contact {
+  margin: 20px auto;
+  max-width: 800px;
 }
-.project{
-    background-color:white;
-    margin:20px auto;
-    padding:20px;
-    boader-radius:10px;
-    box-shadow:0 4px 6px rgba (0,0,0,.1);
-    transition:transform 0.3s ease-in-out;
-    display:flex;
-    flex-direction:column;
-    align-items:center; 
+
+/* Flexbox for Projects */
+.project {
+  background-color: #f4f4f4;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.project:hover{
-    transform:translateY(-5px)
+
+.project:hover {
+  transform: translateY(-5px);
 }
-form{
-    dispalay:flex;
-    flex-direction:column;
-    gap:15px;
-    max-width:400px;
-    margin:0 auto;
-    color:white;
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+  color: #ccc;
 }
-input,textarea,buttton{
-    width:100%;
-    padding:10px;
-    font-size:1rem;
-    boader:1px solid #ccc;
-    boader-radius:15px;
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
-button{
-    background-color:#333;
-    color:white;
-    cursor:pointer;
-    transition:background 0.3s ease;
+
+button {
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-button:hover{
-    background-color:#333ff
+
+button:hover {
+  background-color: #ff9800;
 }
-section h2{
-    color: #333;
-    margin-bottom: 10px;
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
 }
-footer{
-    background-color: #333;
-    color: #fff;
+
+/* CSS Transitions and Animations */
+nav ul li a {
+  position: relative;
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: #ff9800;
+  transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}
+.about-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .project {
     text-align: center;
-    padding: 10px 0;
-    position:absolute;
-    bottom: 0;
-    width: 100%;
+  }
 }
-nav ul li a:before{
-    content:'';position:absolute;
-    left:0;
-    bottom:0;
-    height:2px;
-    width:o;
-    background:#ff9800;
-    transition:width0.3s ease-in-out;
+
+/* Dark Mode */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+  background-color: #282c34; /* Dark gray background */
+  color: rgb(29, 27, 27); /* Change text color to white for better contrast */
+  font-size: 18px; /* Increase base font size */
 }
-nav ul li a:hover::before{
+
+h2 {
+  font-size: 2.5rem; /* Increase size for h2 headings */
 }
-@media(max-width:768{
-nav ul{
-    flex-direction:column;
-    }
-project{
-    text-align:center
-} 
-}  
+
+h3 {
+  font-size: 2rem; /* Increase size for h3 headings */
+}
+
+p {
+  font-size: 1.2rem; /* Increase size for paragraph text */
+}
+
+ul li {
+  font-size: 1.2rem; /* Increase size for list items */
+}
+
+button {
+  font-size: 1.2rem; /* Increase size for button text */
+}
